@@ -1,10 +1,10 @@
-<div class="d-flex justify-content-center p-4 fw-bold">Results</div>
+<div class="d-flex justify-content-center p-4 fw-bold">RESULT</div>
 <div class="quizContainer">
     <div *ngFor="let data of quizObjQesAns; index as i">
         <p class="d-flex flex-row justify-content-start mt-2" [innerHTML] = "data.question"></p>
         <div class="d-flex flex-row justify-content-start">
             <div class="me-2" *ngFor="let choice of data.choice; index as j">
-                <button type="button" class="btn btn-outline-success"
+                <button type="button" class="btn btn-outline-success mb-4"
                     [ngClass]="{correctAns: choice.correctAns ,inCorrectAns: choice.inCorrectAns}" [innerHTML] = "choice.option"></button>
             </div>
         </div>
@@ -17,5 +17,5 @@
 </div>
 <div class="d-flex justify-content-center w-100">
 <button class="btn btn-secondary w-50" [routerLink]="['']"
-    routerLinkActive="router-link-active">Retake Quiz</button>
+    routerLinkActive="router-link-active">Create a New Quiz</button>
 </div>
