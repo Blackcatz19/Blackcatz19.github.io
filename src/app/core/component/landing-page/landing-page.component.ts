@@ -52,9 +52,9 @@ export class LandingPageComponent implements OnInit {
       this.quizObjQesAns = [];
       this.quizSelectedOptions = [];
       quizResult.map((elements: QuizResults, index: number) => {
-        let incorrect_answer = elements.incorrect_answers;
+        let incorrect_answer:string[] = elements.incorrect_answers;
 
-        let correct_answer = elements.correct_answer;
+        let correct_answer:string = elements.correct_answer;
         incorrect_answer.push(correct_answer);
 
         let choiceObjArr: QuizChoice[] = [];
@@ -82,7 +82,7 @@ export class LandingPageComponent implements OnInit {
    * @returns shuffled array
    */
   shuffleArray(array: string[]): string[] {
-    const newArray = [...array];
+    const newArray:string[] = [...array];
 
     newArray.sort(() => Math.random() - 0.5);
 
