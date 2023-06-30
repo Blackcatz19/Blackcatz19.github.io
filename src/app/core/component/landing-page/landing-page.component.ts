@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class LandingPageComponent implements OnInit {
   categoryObj: QuizCategoryData[] = [];
-  difficultyLvl: string[] = ['easy', 'medium', 'hard'];
+  difficultyLvl: string[] = ['Easy', 'Medium', 'Hard'];
   selectedCategoryOptions: string = '';
   selectedDifficultyOptions: string = '';
   quizResults: QuizResults[] = [];
@@ -35,7 +35,7 @@ export class LandingPageComponent implements OnInit {
   createQuiz(): void {
     this.isAllQuizAnsSelected = false;
     if (this.selectedCategoryOptions && this.selectedDifficultyOptions) {
-      this.quizDataService.fetchQuizQuestions(this.selectedCategoryOptions, this.selectedDifficultyOptions).subscribe((data: QuizResponse) => {
+      this.quizDataService.fetchQuizQuestions(this.selectedCategoryOptions, this.selectedDifficultyOptions.toLowerCase()).subscribe((data: QuizResponse) => {
         this.quizResults = [];
         this.quizResults = data.results;
         this.responseCode = data.response_code;
