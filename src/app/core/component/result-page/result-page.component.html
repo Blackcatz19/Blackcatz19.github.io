@@ -3,8 +3,8 @@
     <div *ngFor="let data of quizObjQesAns; index as i">
         <p class="d-flex flex-row justify-content-start mt-2" [innerHTML] = "data.question"></p>
         <div class="d-flex flex-row justify-content-start">
-            <div class="me-4" *ngFor="let choice of data.choice; index as j">
-                <button type="button" class="btn btn-outline-success mb-4"
+            <div class="me-2" *ngFor="let choice of data.choice; index as j">
+                <button type="button" class="btn btn-outline-success mb-2"
                     [ngClass]="{correctAns: choice.correctAns ,inCorrectAns: choice.inCorrectAns}" [innerHTML] = "choice.option"></button>
             </div>
         </div>
