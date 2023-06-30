@@ -34,28 +34,28 @@ export class QuizDataService {
      * Set All Quiz Questions
      * @param quizQes 
      */
-  setQuizQes(quizQes: QuizQesAns[]) {
+  setQuizQes(quizQes: QuizQesAns[]):void {
     this.allQuizQes = quizQes;
   }
   /**
      * Get All Quiz Questions
      * @returns All Quiz Questions
      */
-  getallQuizQes() {
+  getallQuizQes():QuizQesAns[] {
     return this.allQuizQes;
   }
   /**
    * Set Selected Answers
    * @param selectedQuizQesAns selected Answers
    */
-  setSelectedQuizQesAns(selectedQuizQesAns: QuizSelectedOptions[]) {
+  setSelectedQuizQesAns(selectedQuizQesAns: QuizSelectedOptions[]):void {
     this.selectedQuizQesAns = selectedQuizQesAns;
   }
   /**
    * Get Selected Quiz Qes & Ans
    * @returns Selected Quiz Qestion & Answers
    */
-  getSelectedQuizQesAns() {
+  getSelectedQuizQesAns():QuizSelectedOptions[] {
     return this.selectedQuizQesAns;
   }
 }

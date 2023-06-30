@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { QuizDataService } from '../../services/quiz-data.service'; 
+import { QuizDataService } from '../../services/quiz-data.service';
 import { QuizCategories, QuizCategoryData, QuizChoice, QuizQesAns, QuizResponse, QuizResults, QuizSelectedOptions } from '../../model/quiz.types';
 import { Router } from '@angular/router';
 @Component({
@@ -19,8 +19,7 @@ export class LandingPageComponent implements OnInit {
   isAllQuizAnsSelected: boolean = false;
   quizSelectedOptions: QuizSelectedOptions[] = [];
 
-  constructor(private quizDataService: QuizDataService, private router: Router) {
-  }
+  constructor(private quizDataService: QuizDataService, private router: Router) { }
   /**
    * To Fetch Categories & 
    */
@@ -80,9 +79,9 @@ export class LandingPageComponent implements OnInit {
   /**
    * Shuffle Array of Options
    * @param array 
-   * @returns array
+   * @returns shuffled array
    */
-  shuffleArray<T>(array: T[]): T[] {
+  shuffleArray(array: string[]): string[] {
     const newArray = [...array];
 
     newArray.sort(() => Math.random() - 0.5);

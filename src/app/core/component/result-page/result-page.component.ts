@@ -1,6 +1,5 @@
 import { Component, Directive, HostListener, OnInit } from '@angular/core';
 import { QuizQesAns, QuizSelectedOptions } from '../../model/quiz.types';
-import { Router } from '@angular/router';
 import { QuizDataService } from '../../services/quiz-data.service';
 
 @Component({
