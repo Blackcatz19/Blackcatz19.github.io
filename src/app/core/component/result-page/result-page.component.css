@@ -37,7 +37,7 @@
 
 .quizContainer {
     width: 100%;
-    max-width: 100%;
+    max-width: 80%;
     margin: 0 auto;
 }
 .btn-outline-success:hover{
